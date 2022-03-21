@@ -1,0 +1,71 @@
+{{#partial "content"}}
+    <div class="data-image">
+    </div>
+    <div class="container" id="data2">
+        <h5 id="data3">Add a Hero</h5>
+        <hr>
+        <form method="Post" action="/addhero">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Hero's Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="power">Power</label>
+                            <input type="text" class="form-control" id="power" name="power" placeholder="Hero's Power">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="weakness">Weakness</label>
+                            <input type="text" class="form-control" id="weakness" name="weakness" placeholder="Hero's Weakness">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <input type="text" class="form-control" id="gender" name="gender" placeholder="Hero's Gender">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="age" name="age" placeholder="Hero's Age">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="squad">Squad</label>
+                            <select class="form-control" id="squad" name="squad" required>
+                                {{#if squads}}
+                                    {{#each squads}}
+                                        <option value="{{id}}">{{squadName}}</option>
+                                    {{/each}}
+                                {{/if}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="data3">Submit</button>
+            </div>
+        </form>
+    </div>
+{{/partial}}
+<!--footer-->
+{{#partial "footer"}}
+    <footer>
+        <hr>
+        <p> &copy; Copyright 2020 </p>
+        <p>Author: Kibuchi Muchai </p>
+        <p>Email: <a href="#">kibuchimuchai@gmail.com</a></p>
+    </footer>
+{{/partial}}
+{{> layout.hbs}}
