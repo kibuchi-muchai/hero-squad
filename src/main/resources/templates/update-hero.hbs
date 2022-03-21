@@ -1,0 +1,47 @@
+{{#partial "content"}}
+    <div class="data-image"></div>
+    <div class="container" id="data">
+        <div class="row">
+            <div class="col-md-6" id="data4">
+                {{#if squad}}
+                    <div class="card text-white mb-3" id="data7">
+                        <div class="card-header">
+                            <p>Squad's Name: {{squad.squadName}}</p>
+                        </div>
+                        <div class="card-body mb-3" id="data8">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" id="data8">Squad's Purpose: {{squad.squadPurpose}}</li>
+                                <li class="list-group-item" id="data8">Squad's Number: {{squad.squadNumber}}</li>
+                                <li class="list-group-item" id="data8">Squad's Group: {{squad.squadGroup}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                {{/if}}
+
+                <div id="data6">
+                    <a href="/deletesquad/{{squad.id}}" class="btn btn-danger">Remove</a>
+                    <a href="/editsquad/{{squad.id}}" class="btn btn-danger">Update</a>
+                </div>
+            </div>
+            <div class="col-md-6" id="data5">
+                {{#if heroes}}
+                    {{#each heroes}}
+                        <p>{{heroName}}</p>
+                        <a href="/heroes/{{id}}" class="btn btn-info">Details</a>
+                    {{/each}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+{{/partial}}
+<!--footer-->
+{{#partial "footer"}}
+    <footer>
+        <hr>
+        <p> &copy; Copyright 2020 </p>
+        <p>Author: Kibuchi Muchai </p>
+        <p>Email: <a href="#">kibuchimuchai@gmail.com</a></p>
+    </footer>
+{{/partial}}
+
+{{> layout.hbs}}

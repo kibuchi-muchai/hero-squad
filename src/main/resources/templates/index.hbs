@@ -1,0 +1,36 @@
+{{#partial "content"}}
+    <div class="data-image">
+    </div>
+    <div class="container" id="data">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {{#if squads}}
+                        {{#each squads}}
+                            <p>{{squadName}}</p>
+                            <a href="/squads/{{id}}" class="btn btn-success">Information</a>
+                        {{/each}}
+                    {{/if}}
+                </div>
+                <div class="col-md-6">
+                    {{#if heroes}}
+                        {{#each heroes}}
+                            <p>{{heroName}}</p>
+                            <a href="/heroes/{{id}}" class="btn btn-success">Information</a>
+                        {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/partial}}
+<!--footer-->
+{{#partial "footer"}}
+    <footer>
+        <hr>
+        <p> &copy; Copyright 2022 </p>
+        <p>Author: Kibuchi Muchai </p>
+        <p>Email: <a href="#">kibuchimuchai@gmail.com</a></p>
+    </footer>
+{{/partial}}
+{{> layout.hbs}}

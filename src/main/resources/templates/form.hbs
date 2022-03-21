@@ -1,0 +1,37 @@
+{{#partial "content"}}
+    <div class="data-image">
+    </div>
+    <div class="container" id="data2">
+        <h5 id="data3">Add a Squad</h5>
+        <hr>
+        <form method="Post" action="/addsquad">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Squad Name">
+            </div>
+            <div class="form-group">
+                <label for="purpose">Purpose</label>
+                <input type="text" class="form-control" id="purpose" name="purpose" placeholder="Squad Purpose">
+            </div>
+            <div class="form-group">
+                <label for="number">Number</label>
+                <input type="number" class="form-control" id="number" name="number" placeholder="Squad Number">
+            </div>
+            <div class="form-group">
+                <label for="group">Group</label>
+                <input type="text" class="form-control" id="group" name="group" placeholder="Squad Group ie. Marvel">
+            </div>
+            <button type="submit" class="btn btn-primary" id="data3">Submit</button>
+        </form>
+    </div>
+{{/partial}}
+<!--footer-->
+{{#partial "footer"}}
+    <footer>
+        <hr>
+        <p> &copy; Copyright 2020 </p>
+        <p>Author: Kibuchi Muchai </p>
+        <p>Email: <a href="#">kibuchimuchai@gmail.com</a></p>
+    </footer>
+{{/partial}}
+{{> layout.hbs}}
